@@ -1,23 +1,19 @@
 import React from 'react';
 
 class App extends React.Component{
-	state = {
-		count:0,
-	};
-	add = () => {
-		this.setState(current => ({count: current.count+1}));
+	state= {
+		isLoading:true,
+		movies:[],
 	}
-	del = () => {
-		this.setState(current => ({count: current.count -1}));
+	componentDidMount(){
+		setTimeout(()=>{
+			this.setState({isLoading:false});
+		}, 6000);
+		//영화데이터로딩
 	}
 	render() {
-		return (
-			<>
-				<h1>the number is: {this.state.count}</h1>
-				<button type="button" onClick={this.add}>add</button>
-				<button type="button" onClick={this.del}>del</button>
-			</>
-		);
+		const {isLoading} = this.state;
+		return <div>{isLoading ? "Loding...	" : "we are ready"}</div>;
 	}
 }
 
