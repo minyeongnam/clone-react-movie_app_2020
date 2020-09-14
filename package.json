@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "yarn run build",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -35,5 +35,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://minyn0106.github.io/movie_aoo_2020"
+  "homepage": "https://minyeongnam.github.io/movie_app_2020"
 }
