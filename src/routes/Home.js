@@ -22,6 +22,7 @@ class Home extends React.Component{
 	}
 	render() {
 		const {isLoading, movies} = this.state;
+		
 		return (
 			<section className="container">
 				{isLoading ? (
@@ -40,6 +41,7 @@ class Home extends React.Component{
 									summary={item.summary}
 									poster={item.medium_cover_image}
 									genres={item.genres}
+									torrents={item.torrents}
 								/>
 							);
 						})}
